@@ -1,15 +1,17 @@
-#include<stdio.h>
-#include<conio.h>
-int kt(char s[]){   
-    int x;
-    x=0;   
-    while (s[x] != '\0')
-    x=x+1;   
-    return(x);
-}  
-int main(){
-	char c[100];
-    printf("Nhap vao chuoi ki tu: ");
-	scanf("%s",&c);
-	printf("\nChuoi co %d ki tu", kt(c));
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+  int i;
+  char buffer [33];
+  printf ("Enter a number: ");
+  scanf ("%d",&i);
+  itoa (i,buffer,10);
+  printf ("decimal: %s\n",buffer);
+  itoa (i,buffer,16);
+  printf ("hexadecimal: %s\n",buffer);
+  itoa (i,buffer,2);
+  printf ("binary: %s\n",buffer);
+  return 0;
 }
